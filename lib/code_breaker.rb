@@ -1,4 +1,6 @@
 class CodeBreaker
+    attr_accessor :guesses
+
     def initialize(type)
         @type = type
         @guesses = 12
@@ -23,9 +25,7 @@ class CodeBreaker
                 puts "\nInvalid guess, try again."
             end
         end
+        self.guesses -= 1
         return maker_guess
     end
 end
-
- code_breaker = CodeBreaker.new("person")
- p code_breaker.make_guess
