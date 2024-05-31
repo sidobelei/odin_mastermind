@@ -26,6 +26,18 @@ class CodeMaker
         end
         return code
     end
-end
 
-p CodeMaker.new("human").set_code 
+    def check_code(guess_code)
+        correct_position_value = 0 
+        code.each_with_index do |element, index|
+            if element == guess_code[index]
+                correct_position_value += 1
+            end 
+        end
+        correct_value = 4 - (guess_code - code).length
+        correct_value -= correct_position_value
+        puts "Numbers that are in the right position: #{correct_position_value}"
+        puts "Numbers that are in the wrong position: #{correct_value}"
+        return [correct_position_value, correct_value] 
+    end
+end
