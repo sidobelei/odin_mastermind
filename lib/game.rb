@@ -16,4 +16,11 @@ class Game
             @results = @code_maker.check_code(guess)
         end
     end
+
+    def check_results
+        if @results == [4, 0]
+            @status = "win"
+        end
+        puts "\nYou #{@status}!"
+    end
 end
