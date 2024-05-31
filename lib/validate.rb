@@ -1,9 +1,11 @@
 module Validate
+    COLORS = ["r", "o", "y", "g", "b", "p"]
+    
     def is_valid?(code)
         valid_inputs = true
         if code.length == 4
             code.each do|element|
-                if !["1", "2", "3", "4", "5", "6"].include?(element)
+                if !COLORS.include?(element)
                     valid_inputs = false
                     break
                 end

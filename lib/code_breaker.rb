@@ -13,8 +13,9 @@ class CodeBreaker
     def make_guess
         valid_inputs = false
         until valid_inputs == true
-            print "---<Seperate each number with a space>---  "
+            print "---<Seperate each letter with a space>--->  "
             maker_guess = gets.chomp.split(" ")
+            maker_guess.map! {|element| element.downcase}
             valid_inputs = is_valid?(maker_guess) 
         end
         self.guesses -= 1
