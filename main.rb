@@ -1,15 +1,11 @@
-#code breaker class
-#makes/ takes guesses
-#track number of tries
-#player type human or computer
+require_relative "lib/code_breaker"
+require_relative "lib/code_maker"
+require_relative "lib/game"
 
-#code maker class
-#player type human or computer
-#set code 
-##randomly if computer
-#give feedback if computer
+code_breaker = CodeBreaker.new("human")
+code_maker = CodeMaker.new("computer")
+game = Game.new(code_breaker, code_maker)
 
-#game logic class
-#set up using numbers 1-6 
-#can only have 4 slots for numbers
-#display guesses, feedback and tries taken
+puts "Welcome to Mastermind"
+game.play
+game.check_results
