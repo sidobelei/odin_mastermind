@@ -18,7 +18,7 @@ class CodeBreaker
         if @type == "human"
             valid_inputs = false
             until valid_inputs == true
-                print "---<Seperate each letter with a space>--->  "
+                print "---<Seperate each letter with a space.>--->  "
                 maker_guess = gets.chomp.split(" ")
                 maker_guess.map! {|element| element.downcase}
                 valid_inputs = is_valid?(maker_guess) 

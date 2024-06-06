@@ -7,7 +7,8 @@ class Game
     end
 
     def play
-        p @code_maker.set_code #delete later
+        @code_maker.set_code
+        puts "\n"
         guess = @code_breaker.make_guess
         @results = @code_maker.check_code(guess)
         until @code_breaker.guesses == 0 || @results == [4, 0] 
@@ -30,5 +31,6 @@ class Game
                 puts "\nThe Computer couldn't crack the code, you win!"
             end
         end
+        puts "The Secret Code was: #{@code_maker.maker_code}"
     end
 end

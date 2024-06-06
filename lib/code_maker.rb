@@ -14,7 +14,7 @@ class CodeMaker
         valid_inputs = false
         until valid_inputs
             if type == "human"
-                puts "Set your code. Valid inputs: r, o, y, g, b, p"
+                puts "\nSet your code. Valid inputs: r, o, y, g, b, p"
                 print "---<Seperate each letter with a space>--->  "
                 self.maker_code = gets.chomp.split(" ")
             elsif type == "computer"

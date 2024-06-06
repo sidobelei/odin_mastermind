@@ -7,7 +7,13 @@ breaker_selected = nil
 maker_selected = nil
 
 puts "Welcome to Mastermind"
-print "Would you like to be the codebreaker or codemaker? "
+puts "How to play:"
+puts "- Each code is made up 4 letters from the following inputs r, o, y, b, g, p. They" 
+puts "  represent the colors red, orange, yellow, blue, green and purple"
+puts "- The code can contain repeats of any color"
+puts "- As a codebreaker your job is to crack the code"
+puts "- As the codemaker you create the code for the computer to crack"
+print "\nWould you like to be the codebreaker or codemaker? "
 until ["codebreaker", "codemaker", "breaker", "maker"].include?(answer)
     answer = gets.chomp.downcase.gsub(/\s+/, "")
     if answer == "codebreaker" || answer == "breaker"
